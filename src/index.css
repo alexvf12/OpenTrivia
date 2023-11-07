@@ -1,0 +1,289 @@
+/*#region Variables, Reset, General & Body ----------------------------------------------------- */
+
+:root {
+  --primary-dark-color: rgb(93, 16, 93);
+  --primary-light-color: #f3e9f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*#endregion */
+
+/*#region Header ------------------------------------------------------------------------------- */
+
+/* See navbar.css file */
+
+/*#endregion */
+
+/*#region Footer ------------------------------------------------------------------------------- */
+
+footer {
+  color: #fff9;
+  background-color: var(--primary-dark-color);
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 0 0;
+  padding: 1em 0;
+
+}
+
+footer {
+  column-count: 3;
+  gap: 4em;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+/*#endregion */
+
+/*#region Divs --------------------------------------------------------------------------------- */
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0em 2em;
+}
+
+.content {
+  flex: 1 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2em 15em;
+}
+
+/*#endregion */
+
+/*#region Specific for Settings screen --------------------------------------------------------- */
+
+.setting p {
+  margin: 2em 0 0.4em 0;
+}
+
+.setting{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: #333;
+  background-color: #f2f2f1;
+  border: 0;
+  outline: none;
+  width: 10em;
+  height: 2.5em;
+}
+
+.btn-selected {
+  background-color: var(--primary-dark-color);
+  color: #fff;
+}
+
+/*#endregion */
+
+/*#region Specific for Questions screen ----------------------------------------------------------- */
+
+.bg-quiz {
+  background-color: #fff;
+}
+
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  gap: 2rem;
+}
+
+.questions .card, .questions .cards  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  padding: 1em;
+  box-shadow: 10px 10px 30px #0008;
+  background: var(--primary-dark-color);
+}
+
+
+.questions .card h2 {
+  font-size: 1.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+  margin: 0 auto 1em;
+  padding: 0.3em 1em 0.1em;
+}
+
+.questions .card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.questions .card p.difficulty {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--primary-dark-color);
+  background-color: yellowgreen;
+  margin: 0 auto 1em;
+  padding: 0.25em 1em;
+}
+
+.questions .card p.question {
+  font-size: 0.9rem;
+  margin: 1em auto;
+}
+
+.questions .card p.answer {
+  font-size: 0.9rem;
+  font-weight: normal;
+  background-color: #000a;
+  margin-top: 1.5em;
+  padding: 0.8em 0.5em;
+  width: 80%;
+  cursor: pointer;
+}
+
+/*#endregion */
+
+/*#region Specific for About screen ------------------------------------------------------------ */
+
+.about h2 {
+  font-size: 3rem;
+}
+
+.about p {
+  width: 50%;
+  text-align: justify;
+  margin-bottom: 3em;
+}
+
+/*#endregion */
+
+/*#region Specific for Error 404 screen -------------------------------------------------------- */
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary-dark-color);
+}
+
+/*#endregion */
+
+
+.incorrectAnswer{
+  margin-top: 1.5em;
+  color: red;
+}
+
+
+.correctAnswer{
+  margin-top: 1.5em;
+  color: green;
+}
+
+.correct{
+  background-color: green !important;
+}
+
+.result {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--primary-dark-color);
+  color: white;
+  border: white 1px solid;
+}
+
+.resultsCards{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+}
+
+.card{
+  background-color: var(--primary-dark-color);
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 15em;
+}
+
+.cards{
+  background-color: var(--primary-dark-color);
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 20em;
+  height: 15em;
+}
+
+.cards div p{
+  margin: 1em;
+}
+h2{
+  margin: 1.5em;
+}
+
+.noresults{
+  text-align: center;
+  margin: 10em;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .logo{
+    font-size: 0.5em;
+    color: #333;
+  }
+
+}

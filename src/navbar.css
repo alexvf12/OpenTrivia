@@ -1,0 +1,137 @@
+/*
+    Based on How to create an awesome navigation bar with HTML & CSS by Kevin Powell.
+    https://www.youtube.com/watch?v=FEmysQARWFU
+*/
+
+nav {
+  background-color: var(--primary-dark-color);
+}
+
+/* As both .logo and nav have float property, header no longer has anything setting its height. */
+/* This little trick fixes that. */
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 4em;
+  float: left;
+  margin: 0.4em 0em;
+  color: var(--primary-light-color);
+  height: 0.5em;
+}
+
+nav {
+  float: right;
+}
+
+
+
+.menu li {
+  display: inline-block;
+  margin-right: 1em; /* Agrega margen derecho para espaciar los elementos */
+}
+
+.c2{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+
+}
+
+
+.container3 nav li {
+  display: inline-block;
+  margin-left: 5em;
+  margin-right: 5em;
+  line-height: 3em;
+  padding-top: 2.25em;
+
+  position: relative; 
+}
+
+nav a {
+  color: var(--primary-light-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a::before {
+  content: '';
+  display: flex;
+  height: 5px;
+  width: 100%;
+  background-color: var(--primary-light-color);
+
+  position: relative;
+  top: 2.5em;
+  width: 0%; /* As we don't want to see this initially. */
+
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+  width: 100%; /* As we want to see it on mouse hover. */
+}
+
+.menu-icon {
+  display: none; /* Oculta el icono de hamburguesa por defecto */
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-light-color);
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-light-color);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .logo{
+    font-size: 2em;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    margin: 1em;
+  }
+
+  .menu {
+    display: none; 
+  }
+
+  .menu.open {
+    display: block; /* Mostrar el menú cuando está abierto en dispositivos móviles */
+  }
+
+
+}
